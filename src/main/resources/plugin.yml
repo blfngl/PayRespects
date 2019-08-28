@@ -1,0 +1,42 @@
+name: PayRespects
+main: blfngl.pay_respects.PayRespects
+version: 0.6
+author: blfngl. John_Smith
+commands:
+    f:
+        description: Pay your respects.
+        usage: /f [player]
+        permission: payrespects.f
+        permission-message: You can't pay your respects.
+    finfo:
+        description: PayRespects plugin info.
+        usage: /finfo
+        permission: payrespects.finfo
+        permission-message: You can't pay your respects.
+    fdebug:
+        description: Toggles PayRespects debugging mode.
+        usage: /fdebug
+        permission: payrespects.fdebug
+        permission-message: You can't debug your respects.
+    fset:
+        description: Change the values of the respect window or payment amount.
+        usage: /fset <window/payment> [integer]
+        permission: payrespects.fset
+        permission-message: You can't change your respect amounts.
+
+permissions:
+    payrespects.*:
+        description: Gives access to all PayRespects commands.
+        children:
+            payrespects.f: true
+            payrespects.finfo: true
+            payrespects.fdebug: true
+            payrespects.fset: true
+    payrespects.f:
+        default: true
+    payrespects.finfo:
+        default: true
+    payrespects.fdebug:
+        default: op
+    payrespects.fset:
+        default: op
