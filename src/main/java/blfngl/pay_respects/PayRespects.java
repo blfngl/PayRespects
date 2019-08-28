@@ -76,6 +76,8 @@ public final class PayRespects extends JavaPlugin implements Listener
 		getCommand(Ref.f_debug).setExecutor(new PRCommandExecutor_FDebug(this));
 		getCommand(Ref.f_set).setExecutor(new PRCommandExecutor_FSet(this));
 
+		// test
+		
 		// Register events
 		PluginManager pm = getServer().getPluginManager();
 		pm.registerEvents(deathListener, this);
