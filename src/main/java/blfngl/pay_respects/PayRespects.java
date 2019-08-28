@@ -52,7 +52,7 @@ public final class PayRespects extends JavaPlugin implements Listener
 	@Override
 	public void onDisable()
 	{ 
-		getLogger().info("PayRespects closing.");
+		log.info("PayRespects closing.");
 	}
 
 	/**
@@ -61,7 +61,7 @@ public final class PayRespects extends JavaPlugin implements Listener
 	@Override
 	public void onEnable()
 	{
-		getLogger().info("PayRespects loading...put an f in the chat.");
+		log.info("PayRespects loading...put an f in the chat.");
 
 		// Check to ensure an economy system (via Vault) exists
 		if (!checkVaultEconomy())
@@ -69,6 +69,9 @@ public final class PayRespects extends JavaPlugin implements Listener
 			log.severe(String.format("Vault is a dependency of PayRespects.", getDescription().getName()));
 			System.out.println("Vault is a dependency of PayRespects.");
 		}
+		
+		else
+			log.info("Vault hooked!");
 
 		// Register commands
 		getCommand(Ref.f_command).setExecutor(new PRCommandExecutor_F(this));
@@ -94,18 +97,8 @@ public final class PayRespects extends JavaPlugin implements Listener
 		// Sets up the config file
 		initConfig();
 
-		getLogger().info("PayRespects loaded!");
+		log.info("PayRespects loaded!");
 	}
-
-	// TODO move commands to separate classes
-	/**
-	 * Command catcher
-	 */
-	/*@Override
-	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args)
-	{
-		return false;
-	}*/
 
 	/**
 	 * Checks to ensure the Vault plugin is installed and an economy system exists.
