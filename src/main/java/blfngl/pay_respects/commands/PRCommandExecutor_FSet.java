@@ -31,6 +31,8 @@ public class PRCommandExecutor_FSet implements CommandExecutor
 					message += args[i] + " ";
 				
 				plugin.getConfig().set(Ref.config_death_msg, message);
+				
+				return true;
 			}
 
 			try {
