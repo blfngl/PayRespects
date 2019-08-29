@@ -1,15 +1,10 @@
 
 package blfngl.pay_respects;
 
-import java.io.File;
-import java.io.InputStreamReader;
-import java.io.Reader;
-import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.logging.Logger;
 
 import org.bukkit.configuration.file.FileConfiguration;
-import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.RegisteredServiceProvider;
@@ -19,6 +14,7 @@ import blfngl.pay_respects.commands.PRCommandExecutor_F;
 import blfngl.pay_respects.commands.PRCommandExecutor_FDebug;
 import blfngl.pay_respects.commands.PRCommandExecutor_FInfo;
 import blfngl.pay_respects.commands.PRCommandExecutor_FSet;
+import blfngl.pay_respects.commands.PRCommandExecutor_FToggle;
 import blfngl.pay_respects.util.PRDeathListener;
 import net.milkbowl.vault.economy.Economy;
 
@@ -44,6 +40,11 @@ public final class PayRespects extends JavaPlugin implements Listener
 
 	// Debug flag
 	private boolean debug = false;
+	// Header flag
+	private boolean displayHeader = true;
+
+	// Default header
+	private String textHeader = Ref.text_header_on;
 
 	/**
 	 * Called on server close
@@ -68,7 +69,7 @@ public final class PayRespects extends JavaPlugin implements Listener
 			log.severe(String.format("Vault is a dependency of PayRespects.", getDescription().getName()));
 			System.out.println("Vault is a dependency of PayRespects.");
 		}
-		
+
 		else
 			log.info("Vault hooked!");
 
@@ -77,9 +78,8 @@ public final class PayRespects extends JavaPlugin implements Listener
 		getCommand(Ref.f_info).setExecutor(new PRCommandExecutor_FInfo(this));
 		getCommand(Ref.f_debug).setExecutor(new PRCommandExecutor_FDebug(this));
 		getCommand(Ref.f_set).setExecutor(new PRCommandExecutor_FSet(this));
+		getCommand(Ref.f_toggle).setExecutor(new PRCommandExecutor_FToggle(this));
 
-		// test
-		
 		// Register events
 		PluginManager pm = getServer().getPluginManager();
 		pm.registerEvents(deathListener, this);
@@ -151,5 +151,16 @@ public final class PayRespects extends JavaPlugin implements Listener
 	{
 		debug = !debug;
 		return debug;
+	}
+	
+	public String getHeader()
+	{
+		return textHeader;
+	}
+
+	public void toggleHeader()
+	{
+		textHeader = displayHeader ? Ref.text_header_on : Ref.text_header_off;
+		displayHeader = !displayHeader;
 	}
 }

@@ -1,6 +1,6 @@
 name: PayRespects
 main: blfngl.pay_respects.PayRespects
-version: 0.6
+version: 0.7
 author: blfngl. John_Smith
 commands:
     f:
@@ -23,6 +23,11 @@ commands:
         usage: /fset <window/payment> [integer]
         permission: payrespects.fset
         permission-message: You can't change your respect amounts.
+    ftoggle:
+        description: Toggles the PayRespects text header on or off.
+        usage: /ftoggle
+        permission: payrespects.ftoggle
+        permission-message: You can't toggle your respect header.
 
 permissions:
     payrespects.*:
@@ -32,6 +37,7 @@ permissions:
             payrespects.finfo: true
             payrespects.fdebug: true
             payrespects.fset: true
+            payrespects.ftoggle: true
     payrespects.f:
         default: true
     payrespects.finfo:
@@ -39,4 +45,6 @@ permissions:
     payrespects.fdebug:
         default: op
     payrespects.fset:
+        default: op
+    payrespects.ftoggle:
         default: op
