@@ -11,19 +11,25 @@ import blfngl.pay_respects.PayRespects;
 import blfngl.pay_respects.Ref;
 import net.md_5.bungee.api.ChatColor;
 
-public class PRCommandExecutor_FDebug implements CommandExecutor
+public class PRCommandExecutor_FToggle implements CommandExecutor
 {
 	private final PayRespects plugin;
 
-	public PRCommandExecutor_FDebug(PayRespects plugin)
+	public PRCommandExecutor_FToggle(PayRespects plugin)
 	{
 		this.plugin = plugin;
 	}
 
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args)
 	{
-		String msg = plugin.getHeader() + ChatColor.RED + "Debug mode " + (plugin.toggleDebug() ? "on." : "off.");
-		sender.sendMessage(msg);
+		if (plugin.isDebug())
+		{
+			String msg = "" + plugin.getHeader() + "Toggle headers";
+			plugin.getLogger().info(msg);
+			sender.sendMessage(msg);
+		}
+
+		plugin.toggleHeader(sender);		
 		return true;
 	}
 }

@@ -31,14 +31,14 @@ public class PRCommandExecutor_F implements CommandExecutor
 
 		if (args.length == 0)
 		{			
-			plugin.getServer().broadcastMessage(Ref.pr_header + respectPayer +
+			plugin.getServer().broadcastMessage(plugin.getHeader() + respectPayer +
 					ChatColor.GOLD + " is paying their respects.");
 			payDeceased();
 		}
 
 		else if (args.length == 1)
 		{
-			plugin.getServer().broadcastMessage(Ref.pr_header + respectPayer + ChatColor.GOLD +
+			plugin.getServer().broadcastMessage(plugin.getHeader() + respectPayer + ChatColor.GOLD +
 					" is paying their respects to " + ChatColor.RED + args[0] + ChatColor.GOLD + ".");
 			payDeceased(args[0]);
 		}

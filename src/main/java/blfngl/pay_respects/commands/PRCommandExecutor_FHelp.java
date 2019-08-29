@@ -11,11 +11,11 @@ import blfngl.pay_respects.PayRespects;
 import blfngl.pay_respects.Ref;
 import net.md_5.bungee.api.ChatColor;
 
-public class PRCommandExecutor_FInfo implements CommandExecutor
+public class PRCommandExecutor_FHelp implements CommandExecutor
 {
 	private final PayRespects plugin;
 
-	public PRCommandExecutor_FInfo(PayRespects plugin)
+	public PRCommandExecutor_FHelp(PayRespects plugin)
 	{
 		this.plugin = plugin;
 	}

@@ -23,7 +23,7 @@ public class PRToggleRecentDeath extends BukkitRunnable
 		// Remove player from map
 		plugin.mapRecentDeaths.remove(playerName);
 		// Announce window is over
-		plugin.getServer().broadcastMessage(Ref.pr_header + "Respects for " + ChatColor.RED + playerName +
+		plugin.getServer().broadcastMessage(plugin.getHeader() + "Respects for " + ChatColor.RED + playerName +
 				ChatColor.GOLD + " have been paid.");
 	}
 }

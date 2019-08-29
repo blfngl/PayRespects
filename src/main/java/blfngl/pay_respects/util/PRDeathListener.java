@@ -25,11 +25,11 @@ public class PRDeathListener implements Listener
 		String deathMsg = event.getDeathMessage();
 		String playerName = getNameFromDeathMessage(deathMsg);
 
-		plugin.getServer().broadcastMessage(Ref.pr_header + plugin.getConfig().getString(Ref.config_death_msg));
+		plugin.getServer().broadcastMessage(plugin.getHeader() + plugin.getConfig().getString(Ref.config_death_msg));
 
 		if (plugin.isDebug())
 		{
-			plugin.getServer().broadcastMessage(Ref.pr_header + "Debugging " + ChatColor.RED +
+			plugin.getServer().broadcastMessage(plugin.getHeader() + "Debugging " + ChatColor.RED +
 					"[Player]: " + playerName + ChatColor.GOLD + " [msg]: " + deathMsg);
 		}
 
