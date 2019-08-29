@@ -24,7 +24,15 @@ public class PRCommandExecutor_FSet implements CommandExecutor
 		{
 			if (args[0].toLowerCase().equals("death_msg"))
 			{
-				plugin.getConfig().set(Ref.config_death_msg, args[1]);
+				String message = "";
+				
+				// Start the loop at i = 1, the first index of the desired death message
+				for (int i = 1; i < args.length; i++)
+					message += args[i] + " ";
+				
+				plugin.getConfig().set(Ref.config_death_msg, message);
+				
+				return true;
 			}
 
 			try {
