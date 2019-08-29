@@ -49,7 +49,7 @@ public final class PayRespects extends JavaPlugin implements Listener
 	private boolean onlyDoubt = true;
 
 	// Default header
-	private String textHeader = Ref.text_header_on;
+	private String textHeader = Ref.text_header_off;
 
 	/**
 	 * Called on server close
