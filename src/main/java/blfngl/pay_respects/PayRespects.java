@@ -44,7 +44,7 @@ public final class PayRespects extends JavaPlugin implements Listener
 	// Debug flag
 	private boolean debug = false;
 	// Header flag
-	private boolean displayHeader = true;
+	private boolean displayHeader = false;
 	// Doubt flag
 	private boolean onlyDoubt = true;
 
