@@ -41,8 +41,13 @@ public class PRCommandExecutor_X implements CommandExecutor
 
 		Random r = new Random();
 		String response;
+		int i;
 
-		int i = r.nextInt(responseList.length - 1);
+		if (plugin.onlyDoubt())
+			i = 0;
+		else
+			i = r.nextInt(responseList.length - 1);
+
 		response = responseList[i];
 
 		return response;

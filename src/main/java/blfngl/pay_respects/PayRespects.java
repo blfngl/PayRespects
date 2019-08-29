@@ -17,6 +17,7 @@ import blfngl.pay_respects.commands.f.PRCommandExecutor_FHelp;
 import blfngl.pay_respects.commands.f.PRCommandExecutor_FSet;
 import blfngl.pay_respects.commands.f.PRCommandExecutor_FToggle;
 import blfngl.pay_respects.commands.x.PRCommandExecutor_X;
+import blfngl.pay_respects.commands.x.PRCommandExecutor_XToggle;
 import blfngl.pay_respects.util.PRDeathListener;
 import net.milkbowl.vault.economy.Economy;
 
@@ -44,6 +45,8 @@ public final class PayRespects extends JavaPlugin implements Listener
 	private boolean debug = false;
 	// Header flag
 	private boolean displayHeader = true;
+	// Doubt flag
+	private boolean onlyDoubt = true;
 
 	// Default header
 	private String textHeader = Ref.text_header_on;
@@ -83,6 +86,7 @@ public final class PayRespects extends JavaPlugin implements Listener
 		getCommand(Ref.f_toggle).setExecutor(new PRCommandExecutor_FToggle(this));
 
 		getCommand(Ref.x_command).setExecutor(new PRCommandExecutor_X(this));
+		getCommand(Ref.x_toggle).setExecutor(new PRCommandExecutor_XToggle(this));
 
 		// Register events
 		PluginManager pm = getServer().getPluginManager();
@@ -173,5 +177,16 @@ public final class PayRespects extends JavaPlugin implements Listener
 		// Print
 		String word = displayHeader ? "on" : "off";
 		sender.sendMessage(this.textHeader + "Headers toggled " + word);
+	}
+
+	public boolean onlyDoubt()
+	{
+		return onlyDoubt;
+	}
+
+	public boolean toggleDoubt()
+	{
+		onlyDoubt = !onlyDoubt;
+		return onlyDoubt;
 	}
 }

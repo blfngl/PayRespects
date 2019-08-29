@@ -33,6 +33,11 @@ commands:
         usage: /x
         permission: payrespects.x
         permission-message: [Intelligence 4/9]
+    xtoggle:
+        description: Toggles only doubt mode on or off.
+        usage: /xtoggle
+        permission: payrespects.xtoggle
+        permission-message: You're doubting your decision.
 
 permissions:
     payrespects.*:
@@ -44,6 +49,7 @@ permissions:
             payrespects.fset: true
             payrespects.ftoggle: true
             payrespects.x: true
+            payrespects.xtoggle: true
     payrespects.f:
         default: true
     payrespects.fhelp:
@@ -56,3 +62,5 @@ permissions:
         default: op
     payrespects.x:
         default: true
+    payrespects.xtoggle:
+        default: op
