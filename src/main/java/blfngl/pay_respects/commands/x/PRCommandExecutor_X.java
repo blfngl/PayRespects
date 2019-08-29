@@ -42,7 +42,7 @@ public class PRCommandExecutor_X implements CommandExecutor
 		Random r = new Random();
 		String response;
 
-		int i = r.nextInt(responseList.length);
+		int i = r.nextInt(responseList.length - 1);
 		response = responseList[i];
 
 		return response;
