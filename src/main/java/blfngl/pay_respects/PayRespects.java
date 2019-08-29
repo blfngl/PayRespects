@@ -4,6 +4,7 @@ package blfngl.pay_respects;
 import java.util.HashMap;
 import java.util.logging.Logger;
 
+import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.PluginManager;
@@ -12,7 +13,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import blfngl.pay_respects.commands.PRCommandExecutor_F;
 import blfngl.pay_respects.commands.PRCommandExecutor_FDebug;
-import blfngl.pay_respects.commands.PRCommandExecutor_FInfo;
+import blfngl.pay_respects.commands.PRCommandExecutor_FHelp;
 import blfngl.pay_respects.commands.PRCommandExecutor_FSet;
 import blfngl.pay_respects.commands.PRCommandExecutor_FToggle;
 import blfngl.pay_respects.util.PRDeathListener;
@@ -75,7 +76,7 @@ public final class PayRespects extends JavaPlugin implements Listener
 
 		// Register commands
 		getCommand(Ref.f_command).setExecutor(new PRCommandExecutor_F(this));
-		getCommand(Ref.f_info).setExecutor(new PRCommandExecutor_FInfo(this));
+		getCommand(Ref.f_help).setExecutor(new PRCommandExecutor_FHelp(this));
 		getCommand(Ref.f_debug).setExecutor(new PRCommandExecutor_FDebug(this));
 		getCommand(Ref.f_set).setExecutor(new PRCommandExecutor_FSet(this));
 		getCommand(Ref.f_toggle).setExecutor(new PRCommandExecutor_FToggle(this));
@@ -152,15 +153,22 @@ public final class PayRespects extends JavaPlugin implements Listener
 		debug = !debug;
 		return debug;
 	}
-	
+
 	public String getHeader()
 	{
 		return textHeader;
 	}
 
-	public void toggleHeader()
+	public void toggleHeader(CommandSender sender)
 	{
+		// Set header
 		textHeader = displayHeader ? Ref.text_header_on : Ref.text_header_off;
+
+		// Toggle
 		displayHeader = !displayHeader;
+		
+		// Print
+		String word = displayHeader ? "on" : "off";
+		sender.sendMessage(this.textHeader + "Headers toggled " + word);
 	}
 }

@@ -8,11 +8,11 @@ commands:
         usage: /f [player]
         permission: payrespects.f
         permission-message: You can't pay your respects.
-    finfo:
-        description: PayRespects plugin info.
-        usage: /finfo
+    fhelp:
+        description: PayRespects information.
+        usage: fhelp
         permission: payrespects.finfo
-        permission-message: You can't pay your respects.
+        permission-message: You can't help your respects.
     fdebug:
         description: Toggles PayRespects debugging mode.
         usage: /fdebug
@@ -34,13 +34,13 @@ permissions:
         description: Gives access to all PayRespects commands.
         children:
             payrespects.f: true
-            payrespects.finfo: true
+            payrespects.fhelp: true
             payrespects.fdebug: true
             payrespects.fset: true
             payrespects.ftoggle: true
     payrespects.f:
         default: true
-    payrespects.finfo:
+    payrespects.fhelp:
         default: true
     payrespects.fdebug:
         default: op
