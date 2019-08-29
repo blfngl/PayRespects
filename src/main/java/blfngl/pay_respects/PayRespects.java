@@ -11,11 +11,12 @@ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import blfngl.pay_respects.commands.PRCommandExecutor_F;
-import blfngl.pay_respects.commands.PRCommandExecutor_FDebug;
-import blfngl.pay_respects.commands.PRCommandExecutor_FHelp;
-import blfngl.pay_respects.commands.PRCommandExecutor_FSet;
-import blfngl.pay_respects.commands.PRCommandExecutor_FToggle;
+import blfngl.pay_respects.commands.f.PRCommandExecutor_F;
+import blfngl.pay_respects.commands.f.PRCommandExecutor_FDebug;
+import blfngl.pay_respects.commands.f.PRCommandExecutor_FHelp;
+import blfngl.pay_respects.commands.f.PRCommandExecutor_FSet;
+import blfngl.pay_respects.commands.f.PRCommandExecutor_FToggle;
+import blfngl.pay_respects.commands.x.PRCommandExecutor_X;
 import blfngl.pay_respects.util.PRDeathListener;
 import net.milkbowl.vault.economy.Economy;
 
@@ -80,6 +81,8 @@ public final class PayRespects extends JavaPlugin implements Listener
 		getCommand(Ref.f_debug).setExecutor(new PRCommandExecutor_FDebug(this));
 		getCommand(Ref.f_set).setExecutor(new PRCommandExecutor_FSet(this));
 		getCommand(Ref.f_toggle).setExecutor(new PRCommandExecutor_FToggle(this));
+
+		getCommand(Ref.x_command).setExecutor(new PRCommandExecutor_X(this));
 
 		// Register events
 		PluginManager pm = getServer().getPluginManager();
@@ -166,7 +169,7 @@ public final class PayRespects extends JavaPlugin implements Listener
 
 		// Set header
 		textHeader = displayHeader ? Ref.text_header_on : Ref.text_header_off;
-		
+
 		// Print
 		String word = displayHeader ? "on" : "off";
 		sender.sendMessage(this.textHeader + "Headers toggled " + word);

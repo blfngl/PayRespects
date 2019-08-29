@@ -1,5 +1,5 @@
 
-package blfngl.pay_respects.commands;
+package blfngl.pay_respects.commands.f;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
