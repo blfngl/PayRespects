@@ -22,7 +22,14 @@ public class PRCommandExecutor_FToggle implements CommandExecutor
 
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args)
 	{
-		plugin.toggleHeader();
+		if (plugin.isDebug())
+		{
+			String msg = "Toggle headers";
+			plugin.getLogger().info(msg);
+			sender.sendMessage(msg);
+		}
+
+		plugin.toggleHeader(sender);		
 		return true;
 	}
 }
