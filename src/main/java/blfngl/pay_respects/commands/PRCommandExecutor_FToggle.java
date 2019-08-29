@@ -24,7 +24,7 @@ public class PRCommandExecutor_FToggle implements CommandExecutor
 	{
 		if (plugin.isDebug())
 		{
-			String msg = "Toggle headers";
+			String msg = plugin.getHeader() + "Toggle headers";
 			plugin.getLogger().info(msg);
 			sender.sendMessage(msg);
 		}
