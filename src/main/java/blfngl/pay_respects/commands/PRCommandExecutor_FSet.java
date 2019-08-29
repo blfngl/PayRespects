@@ -20,7 +20,7 @@ public class PRCommandExecutor_FSet implements CommandExecutor
 
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args)
 	{
-		if (args[1] != null)
+		if (args.length <= 2)
 		{
 			if (args[0].toLowerCase().equals("death_msg"))
 			{
@@ -63,6 +63,7 @@ public class PRCommandExecutor_FSet implements CommandExecutor
 				return true;
 
 			} catch (NumberFormatException e) {
+				plugin.getLogger().warning("Invalid argument, try an integer, not a string!");
 				sender.sendMessage(plugin.getHeader() + "Invalid argument, try an integer, not a string!");
 			}
 
