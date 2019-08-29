@@ -6,7 +6,7 @@ import net.md_5.bungee.api.ChatColor;
 public class Ref
 {
 	public static final String text_header_on = ChatColor.GREEN + "[PayRespects] " + ChatColor.GOLD;
-	public static final String text_header_off = ChatColor.GOLD + "";
+	public static final String text_header_off = "" + ChatColor.GOLD;
 
 	public static final String f_command = "f";
 	public static final String f_help = "fhelp";

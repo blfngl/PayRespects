@@ -161,11 +161,11 @@ public final class PayRespects extends JavaPlugin implements Listener
 
 	public void toggleHeader(CommandSender sender)
 	{
-		// Set header
-		textHeader = displayHeader ? Ref.text_header_on : Ref.text_header_off;
-
 		// Toggle
 		displayHeader = !displayHeader;
+
+		// Set header
+		textHeader = displayHeader ? Ref.text_header_on : Ref.text_header_off;
 		
 		// Print
 		String word = displayHeader ? "on" : "off";
