@@ -21,6 +21,7 @@ public class PRCommandExecutor_XToggle implements CommandExecutor
 
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args)
 	{
+		sender.sendMessage(plugin.getHeader() + "Toggle doubt mode.");
 		plugin.toggleDoubt();
 		return true;
 	}
