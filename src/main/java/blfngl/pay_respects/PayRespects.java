@@ -124,6 +124,7 @@ public final class PayRespects extends JavaPlugin implements Listener
 
 		config.addDefault(Ref.config_respect_window, Ref.respect_window);
 		config.addDefault(Ref.config_respect_payment, Ref.respect_payment);
+		config.addDefault(Ref.config_death_msg, Ref.death_msg);
 		config.options().copyDefaults(true);
 
 		// Save config file
