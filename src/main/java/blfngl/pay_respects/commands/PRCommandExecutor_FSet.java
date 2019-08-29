@@ -72,7 +72,7 @@ public class PRCommandExecutor_FSet implements CommandExecutor
 		
 		else
 		{
-			sender.sendMessage(plugin.getHeader() + "This command requires 2 arguments.");
+			sender.sendMessage(plugin.getHeader() + "This command requires at least 2 arguments.");
 		}
 
 		return false;
