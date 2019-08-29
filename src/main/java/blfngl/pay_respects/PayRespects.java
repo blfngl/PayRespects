@@ -42,7 +42,6 @@ public final class PayRespects extends JavaPlugin implements Listener
 	// Logger
 	private static final Logger log = Logger.getLogger("Minecraft");
 
-
 	// Debug flag
 	private boolean debug = false;
 
