@@ -1,6 +1,6 @@
 name: PayRespects
 main: blfngl.pay_respects.PayRespects
-version: 0.7
+version: 0.8
 author: blfngl. John_Smith
 commands:
     f:
