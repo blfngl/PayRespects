@@ -22,7 +22,7 @@ public class PRCommandExecutor_FDebug implements CommandExecutor
 
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args)
 	{
-		String msg = Ref.pr_header + ChatColor.RED + "Debug mode " + (plugin.toggleDebug() ? "on." : "off.");
+		String msg = plugin.getHeader() + ChatColor.RED + "Debug mode " + (plugin.toggleDebug() ? "on." : "off.");
 		sender.sendMessage(msg);
 		return true;
 	}

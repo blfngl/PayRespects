@@ -53,17 +53,17 @@ public class PRCommandExecutor_FSet implements CommandExecutor
 				
 				else
 				{
-					sender.sendMessage(Ref.pr_header + "Invalid argument, try 'window' or 'payment'.");
+					sender.sendMessage(plugin.getHeader() + "Invalid argument, try 'window' or 'payment'.");
 					return false;
 				}
 				
-				sender.sendMessage(Ref.pr_header + "Setting respect_" + args[0] + " to " +
+				sender.sendMessage(plugin.getHeader() + "Setting respect_" + args[0] + " to " +
 						ChatColor.RED + amount + ChatColor.GREEN + " (was " + amtOld + ").");
 
 				return true;
 
 			} catch (NumberFormatException e) {
-				sender.sendMessage(Ref.pr_header + "Invalid argument, try an integer, not a string!");
+				sender.sendMessage(plugin.getHeader() + "Invalid argument, try an integer, not a string!");
 			}
 
 			plugin.saveConfig();
@@ -71,7 +71,7 @@ public class PRCommandExecutor_FSet implements CommandExecutor
 		
 		else
 		{
-			sender.sendMessage(Ref.pr_header + "This command requires 2 arguments.");
+			sender.sendMessage(plugin.getHeader() + "This command requires 2 arguments.");
 		}
 
 		return false;
