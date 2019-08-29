@@ -1,6 +1,6 @@
 name: PayRespects
 main: blfngl.pay_respects.PayRespects
-version: 0.7
+version: 0.8
 author: blfngl. John_Smith
 commands:
     f:
@@ -28,6 +28,16 @@ commands:
         usage: /ftoggle
         permission: payrespects.ftoggle
         permission-message: You can't toggle your respect header.
+    x:
+        description: Doubt.
+        usage: /x
+        permission: payrespects.x
+        permission-message: [Intelligence 4/9]
+    xtoggle:
+        description: Toggles only doubt mode on or off.
+        usage: /xtoggle
+        permission: payrespects.xtoggle
+        permission-message: You're doubting your decision.
 
 permissions:
     payrespects.*:
@@ -38,6 +48,8 @@ permissions:
             payrespects.fdebug: true
             payrespects.fset: true
             payrespects.ftoggle: true
+            payrespects.x: true
+            payrespects.xtoggle: true
     payrespects.f:
         default: true
     payrespects.fhelp:
@@ -47,4 +59,8 @@ permissions:
     payrespects.fset:
         default: op
     payrespects.ftoggle:
+        default: op
+    payrespects.x:
+        default: true
+    payrespects.xtoggle:
         default: op

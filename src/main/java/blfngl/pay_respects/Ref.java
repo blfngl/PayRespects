@@ -13,6 +13,9 @@ public class Ref
 	public static final String f_debug = "fdebug";
 	public static final String f_set = "fset";
 	public static final String f_toggle = "ftoggle";
+	
+	public static final String x_command = "x";
+	public static final String x_toggle = "xtoggle";
 
 	public static final int respect_window = 15;
 	public static final int respect_payment = 5;
