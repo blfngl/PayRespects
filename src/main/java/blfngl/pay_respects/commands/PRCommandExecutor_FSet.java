@@ -22,6 +22,11 @@ public class PRCommandExecutor_FSet implements CommandExecutor
 	{
 		if (args[1] != null)
 		{
+			if (args[0].toLowerCase().equals("death_msg"))
+			{
+				plugin.getConfig().set(Ref.config_death_msg, args[1]);
+			}
+
 			try {
 				int amount = Integer.parseInt(args[1]);
 				int amtOld = 0;
@@ -47,12 +52,18 @@ public class PRCommandExecutor_FSet implements CommandExecutor
 				sender.sendMessage(Ref.pr_header + "Setting respect_" + args[0] + " to " +
 						ChatColor.RED + amount + ChatColor.GREEN + " (was " + amtOld + ").");
 
-				plugin.saveConfig();
 				return true;
 
 			} catch (NumberFormatException e) {
 				sender.sendMessage(Ref.pr_header + "Invalid argument, try an integer, not a string!");
 			}
+
+			plugin.saveConfig();
+		}
+		
+		else
+		{
+			sender.sendMessage(Ref.pr_header + "This command requires 2 arguments.");
 		}
 
 		return false;

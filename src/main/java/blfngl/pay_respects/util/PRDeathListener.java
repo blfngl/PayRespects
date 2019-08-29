@@ -25,7 +25,7 @@ public class PRDeathListener implements Listener
 		String deathMsg = event.getDeathMessage();
 		String playerName = getNameFromDeathMessage(deathMsg);
 
-		plugin.getServer().broadcastMessage(Ref.pr_header + "Press F to pay respects.");
+		plugin.getServer().broadcastMessage(Ref.pr_header + plugin.getConfig().getString(Ref.config_death_msg));
 
 		if (plugin.isDebug())
 		{
