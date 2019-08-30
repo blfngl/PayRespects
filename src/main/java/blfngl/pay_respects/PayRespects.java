@@ -106,6 +106,8 @@ public final class PayRespects extends JavaPlugin implements Listener
 		
 		displayHeader = config.getBoolean(Ref.config_display_header);
 		onlyDoubt = config.getBoolean(Ref.config_only_doubt);
+		
+		textHeader = displayHeader ? Ref.text_header_on : Ref.text_header_off;
 
 		log.info("PayRespects loaded!");
 	}
