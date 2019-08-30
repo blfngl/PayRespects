@@ -48,7 +48,7 @@ public class PRCommandExecutor_X implements CommandExecutor
 		else
 			i = r.nextInt(responseList.length - 1);
 
-		response = responseList[i];
+		response = plugin.getHeader() + responseList[i];
 
 		return response;
 	}
