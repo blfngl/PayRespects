@@ -24,4 +24,5 @@ public class Ref
 	public static final String config_respect_window = "respect_window";
 	public static final String config_respect_payment = "respect_payment";
 	public static final String config_death_msg = "death_message";
+	public static final String config_display_header = "header_on";
 }
