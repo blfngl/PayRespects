@@ -50,6 +50,16 @@ permissions:
             payrespects.ftoggleheader: true
             payrespects.x: true
             payrespects.xtoggle: true
+    payrespects.user:
+        description: Gives access to all user PayRespects commands.
+        children:
+            payrespects.f: true
+            payrespects.fhelp: true
+            payrespects.fdebug: false
+            payrespects.fset: false
+            payrespects.ftoggleheader: false
+            payrespects.x: true
+            payrespects.xtoggle: false
     payrespects.f:
         default: true
     payrespects.fhelp:
