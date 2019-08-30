@@ -20,7 +20,7 @@ public class PRCommandExecutor_FSet implements CommandExecutor
 
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args)
 	{
-		if (args.length <= 2)
+		if (args.length >= 2)
 		{
 			if (args[0].toLowerCase().equals("death_msg"))
 			{
@@ -31,6 +31,9 @@ public class PRCommandExecutor_FSet implements CommandExecutor
 					message += args[i] + " ";
 				
 				plugin.getConfig().set(Ref.config_death_msg, message);
+				
+				if (plugin.isDebug())
+					sender.sendMessage(plugin.getHeader() + "Changed death message to: " + message);
 				
 				return true;
 			}
