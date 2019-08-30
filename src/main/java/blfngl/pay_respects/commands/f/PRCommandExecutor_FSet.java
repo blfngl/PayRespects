@@ -35,6 +35,7 @@ public class PRCommandExecutor_FSet implements CommandExecutor
 				if (plugin.isDebug())
 					sender.sendMessage(plugin.getHeader() + "Changed death message to: " + message);
 				
+				plugin.saveConfig();
 				return true;
 			}
 
