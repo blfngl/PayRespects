@@ -26,17 +26,17 @@ A Minecraft server plugin for paying respects.
 
 1. ***Respect window*** - The amount of time users are given to pay their respects to the deceased.
 ```
-blfngl: /fset window 15.
+/fset window 15.
 Setting respect window to 15.
 ```
 2. ***Payment amount*** - The amount of money given to a deceased player per respect paid during the ***respect window***.
 ```
-blfngl: /fset payment 3
+/fset payment 3
 Setting respect payment to 3.
 ```
 3. ***Death message*** - The message broadcast to the server following a player's death.
 ```
-blfngl: /fset death_msg Press F to pay respects.
+/fset death_msg Press F to pay respects.
 Changed death message to: Press F to pay respects.
 ```
 **/ftoggleheader** - Toggles the plugin chat header.
