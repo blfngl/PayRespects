@@ -14,8 +14,8 @@ A Minecraft server plugin for paying respects.
  ```
  **/x** - Press x to doubt.
  ```
- Cole Phelps: /x
- Cole Phelps doubts.
+ Cole_Phelps: /x
+ Cole_Phelps doubts.
  ```
  **/fhelp** - Displays some information about the plugin.
 
