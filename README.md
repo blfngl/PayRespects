@@ -1,7 +1,6 @@
 # PayRespects
 A Minecraft server plugin for paying respects.
 
-## Functionality
 ### User Commands
  **/f** - Allows a player to pay respects to the general audience. May be used at any time, or during the ***respect window*** to pay the deceased.
  ```
