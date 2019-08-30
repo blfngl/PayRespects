@@ -185,7 +185,7 @@ public final class PayRespects extends JavaPlugin implements Listener
 
 		// Print
 		String word = displayHeader ? "on" : "off";
-		sender.sendMessage(this.textHeader + "Headers toggled " + word);
+		sender.sendMessage(textHeader + "Headers toggled " + word);
 	}
 
 	public boolean onlyDoubt()
@@ -193,9 +193,16 @@ public final class PayRespects extends JavaPlugin implements Listener
 		return onlyDoubt;
 	}
 
-	public boolean toggleDoubt()
+	public boolean toggleDoubt(CommandSender sender)
 	{
 		onlyDoubt = !onlyDoubt;
+		
+		config.set(Ref.config_only_doubt, onlyDoubt);
+		saveConfig();
+		
+		String word = onlyDoubt ? "on" : "off";
+		sender.sendMessage(textHeader + "Doubt mode toggled " + word);
+		
 		return onlyDoubt;
 	}
 }
