@@ -39,7 +39,7 @@ public class PRCommandExecutor_F implements CommandExecutor
 		else if (args.length == 1)
 		{
 			plugin.getServer().broadcastMessage(plugin.getHeader() + respectPayer + ChatColor.GOLD +
-					" has paid their respects to " + ChatColor.RED + args[0] + ChatColor.GOLD + ".");
+					" paid their respects to " + ChatColor.RED + args[0] + ChatColor.GOLD + ".");
 			payDeceased(args[0]);
 		}
 
