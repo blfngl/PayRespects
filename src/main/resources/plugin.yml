@@ -23,10 +23,10 @@ commands:
         usage: /fset <window/payment> [integer]
         permission: payrespects.fset
         permission-message: You can't change your respect amounts.
-    ftoggle:
+    ftoggleheader:
         description: Toggles the PayRespects text header on or off.
-        usage: /ftoggle
-        permission: payrespects.ftoggle
+        usage: /ftoggleheader
+        permission: payrespects.ftoggleheader
         permission-message: You can't toggle your respect header.
     x:
         description: Doubt.
@@ -47,7 +47,7 @@ permissions:
             payrespects.fhelp: true
             payrespects.fdebug: true
             payrespects.fset: true
-            payrespects.ftoggle: true
+            payrespects.ftoggleheader: true
             payrespects.x: true
             payrespects.xtoggle: true
     payrespects.f:
@@ -58,7 +58,7 @@ permissions:
         default: op
     payrespects.fset:
         default: op
-    payrespects.ftoggle:
+    payrespects.ftoggleheader:
         default: op
     payrespects.x:
         default: true

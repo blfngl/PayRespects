@@ -15,7 +15,7 @@ import blfngl.pay_respects.commands.f.PRCommandExecutor_F;
 import blfngl.pay_respects.commands.f.PRCommandExecutor_FDebug;
 import blfngl.pay_respects.commands.f.PRCommandExecutor_FHelp;
 import blfngl.pay_respects.commands.f.PRCommandExecutor_FSet;
-import blfngl.pay_respects.commands.f.PRCommandExecutor_FToggle;
+import blfngl.pay_respects.commands.f.PRCommandExecutor_FToggleHeader;
 import blfngl.pay_respects.commands.x.PRCommandExecutor_X;
 import blfngl.pay_respects.commands.x.PRCommandExecutor_XToggle;
 import blfngl.pay_respects.util.PRDeathListener;
@@ -83,7 +83,7 @@ public final class PayRespects extends JavaPlugin implements Listener
 		getCommand(Ref.f_help).setExecutor(new PRCommandExecutor_FHelp(this));
 		getCommand(Ref.f_debug).setExecutor(new PRCommandExecutor_FDebug(this));
 		getCommand(Ref.f_set).setExecutor(new PRCommandExecutor_FSet(this));
-		getCommand(Ref.f_toggle).setExecutor(new PRCommandExecutor_FToggle(this));
+		getCommand(Ref.f_toggle_header).setExecutor(new PRCommandExecutor_FToggleHeader(this));
 
 		getCommand(Ref.x_command).setExecutor(new PRCommandExecutor_X(this));
 		getCommand(Ref.x_toggle).setExecutor(new PRCommandExecutor_XToggle(this));

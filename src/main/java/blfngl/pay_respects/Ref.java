@@ -12,7 +12,7 @@ public class Ref
 	public static final String f_help = "fhelp";
 	public static final String f_debug = "fdebug";
 	public static final String f_set = "fset";
-	public static final String f_toggle = "ftoggle";
+	public static final String f_toggle_header = "ftoggleheader";
 
 	public static final String x_command = "x";
 	public static final String x_toggle = "xtoggle";
