@@ -61,7 +61,7 @@ public class PRCommandExecutor_FSet implements CommandExecutor
 					return false;
 				}
 				
-				sender.sendMessage(plugin.getHeader() + "Setting respect_" + args[0] + " to " +
+				sender.sendMessage(plugin.getHeader() + "Setting respect " + args[0] + " to " +
 						ChatColor.RED + amount + ChatColor.GREEN + " (was " + amtOld + ").");
 
 				return true;
