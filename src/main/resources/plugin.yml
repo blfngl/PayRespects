@@ -20,7 +20,7 @@ commands:
         permission-message: You can't debug your respects.
     fset:
         description: Change the values of the respect window or payment amount.
-        usage: /fset <window/payment> [integer]
+        usage: /fset <window/payment/death_msg> [integer/integer]
         permission: payrespects.fset
         permission-message: You can't change your respect amounts.
     ftoggleheader:
