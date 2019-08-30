@@ -13,7 +13,7 @@ public class Ref
 	public static final String f_debug = "fdebug";
 	public static final String f_set = "fset";
 	public static final String f_toggle = "ftoggle";
-	
+
 	public static final String x_command = "x";
 	public static final String x_toggle = "xtoggle";
 
@@ -26,4 +26,17 @@ public class Ref
 	public static final String config_death_msg = "death_message";
 	public static final String config_display_header = "header_on";
 	public static final String config_only_doubt = "only_doubt";
+
+	public static final String[] doubtResponseList = {
+			"Doubt",
+			"Suspicion",
+			"Be skeptical",
+			"Hard to believe",
+			"It seems the story you tell may be false",
+			"the story you're currently speaking of seems illegitimate",
+			"given the lack of credible evidence you are presenting i find it highly"
+					+ "difficult to place any trust in the more than likely fabricated"
+					+ "alibi you have given me",
+			"You're lying Morgan!"
+	};
 }
