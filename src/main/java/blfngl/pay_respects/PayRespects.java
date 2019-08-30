@@ -44,9 +44,9 @@ public final class PayRespects extends JavaPlugin implements Listener
 	// Debug flag
 	private boolean debug = false;
 	// Header flag
-	private boolean displayHeader = config.getBoolean(Ref.config_display_header);
+	private boolean displayHeader;
 	// Doubt flag
-	private boolean onlyDoubt = true;
+	private boolean onlyDoubt;
 
 	// Default header
 	private String textHeader = Ref.text_header_off;
@@ -103,6 +103,9 @@ public final class PayRespects extends JavaPlugin implements Listener
 
 		// Sets up the config file
 		initConfig();
+		
+		displayHeader = config.getBoolean(Ref.config_display_header);
+		onlyDoubt = config.getBoolean(Ref.config_only_doubt);
 
 		log.info("PayRespects loaded!");
 	}
@@ -134,6 +137,7 @@ public final class PayRespects extends JavaPlugin implements Listener
 		config.addDefault(Ref.config_respect_payment, Ref.respect_payment);
 		config.addDefault(Ref.config_death_msg, Ref.death_msg);
 		config.addDefault(Ref.config_display_header, false);
+		config.addDefault(Ref.config_only_doubt, true);
 		config.options().copyDefaults(true);
 
 		// Save config file
